@@ -10,21 +10,26 @@
         ],
         "jobRoleArn": "arn:aws:iam::718039241689:role/BATCH-EFS-ROLE",
         "environment": [
-            {
-                "name": "STDOUT_FILENAME",
-                "value": "./.gp_metadata/stdout.txt"
+            {   
+                "name": "GP_METADATA_DIR",
+                "value": "./.gp_metadata/"
+            
             },
             {
                 "name": "STDOUT_FILENAME",
-                "value": "./.gp_metadata/stdout.txt"
+                "value": "$GP_METADATA_DIR/stdout.txt"
+            },
+            {
+                "name": "STDOUT_FILENAME",
+                "value": "$GP_METADATA_DIR/stdout.txt"
             },
             {
                 "name": "EXITCODE_FILENAME",
-                "value": "./.gp_metadata/exit_code.txt"
+                "value": "$GP_METADATA_DIR/exit_code.txt"
 
             }
         ],
-        "image": "liefeld/java17_oracle",
+        "image": "genepattern/java17",
         "memory": 2000,
         "mountPoints": [],
         "ulimits": [],
