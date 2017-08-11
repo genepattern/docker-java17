@@ -1,6 +1,6 @@
 FROM ubuntu:14.04
 
-COPY runS3OnBatch.sh /usr/local/bin/runS3OnBatch.sh
+COPY common/container_scripts/runS3OnBatch.sh /usr/local/bin/runS3OnBatch.sh
 
 RUN mkdir /build
 
@@ -29,7 +29,7 @@ ENV PATH $JAVA_HOME/bin:$PATH
 
     
 RUN chmod ugo+x /usr/local/bin/runS3OnBatch.sh
-COPY runLocal.sh /usr/local/bin/runLocal.sh
+COPY common/container_scripts/runLocal.sh /usr/local/bin/runLocal.sh
 
  
 CMD ["/usr/local/bin/runS3OnBatch.sh" ]
