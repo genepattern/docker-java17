@@ -14,19 +14,6 @@
                 "name": "GP_METADATA_DIR",
                 "value": "./.gp_metadata/"
             
-            },
-            {
-                "name": "STDOUT_FILENAME",
-                "value": "$GP_METADATA_DIR/stdout.txt"
-            },
-            {
-                "name": "STDOUT_FILENAME",
-                "value": "$GP_METADATA_DIR/stdout.txt"
-            },
-            {
-                "name": "EXITCODE_FILENAME",
-                "value": "$GP_METADATA_DIR/exit_code.txt"
-
             }
         ],
         "image": "genepattern/java17",
