@@ -13,7 +13,6 @@
             {   
                 "name": "GP_METADATA_DIR",
                 "value": "./.gp_metadata/"
-            
             }
         ],
         "image": "genepattern/java17",

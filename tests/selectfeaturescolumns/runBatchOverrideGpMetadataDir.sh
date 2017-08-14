@@ -3,7 +3,9 @@
 
 . runConfig.sh
 export GP_METADATA_DIR=$WORKING_DIR/meta
-mkdir $GP_METADATA_DIR
+mkdir -p $GP_METADATA_DIR
+
+export STDOUT_FILENAME=foo.stdout.txt
 
 . ../../common/testing_scripts/runOnBatch.sh
 
