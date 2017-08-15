@@ -15,7 +15,7 @@
                 "value": "./.gp_metadata/"
             }
         ],
-        "image": "genepattern/java17",
+        "image": "genepattern/docker-java17",
         "memory": 2000,
         "mountPoints": [],
         "ulimits": [],

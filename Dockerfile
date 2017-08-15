@@ -1,7 +1,5 @@
 FROM ubuntu:14.04
 
-COPY common/container_scripts/runS3OnBatch.sh /usr/local/bin/runS3OnBatch.sh
-
 RUN mkdir /build
 
 COPY Dockerfile /build/Dockerfile
@@ -21,15 +19,14 @@ RUN cd /build && \
    wget https://s3.amazonaws.com/genepattern-largefile-cache/genepattern-server/resources/wrapper_scripts/docker/aws_batch/containers/Java17_oracle_jdk/jdk-7u80-linux-x64.tar.gz && \
    tar zxvf jdk-7u80-linux-x64.tar.gz
 
-
-
 # Define commonly used JAVA_HOME variable
 ENV JAVA_HOME /build/java/jdk1.7.0_80
 ENV PATH $JAVA_HOME/bin:$PATH
-
     
-RUN chmod ugo+x /usr/local/bin/runS3OnBatch.sh
 COPY common/container_scripts/runLocal.sh /usr/local/bin/runLocal.sh
+COPY common/container_scripts/runS3OnBatch.sh /usr/local/bin/runS3OnBatch.sh
+
+RUN chmod ugo+x /usr/local/bin/runS3OnBatch.sh
 
  
 CMD ["/usr/local/bin/runS3OnBatch.sh" ]
