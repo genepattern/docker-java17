@@ -8,7 +8,7 @@ WORKING_DIR=$TEST_ROOT/job_1
 COMMAND_LINE="java -cp $TASKLIB/SelectFeaturesColumns.jar:$TASKLIB/gp-modules.jar org.genepattern.modules.selectfeaturescolumns.SelectFeaturesColumns $INPUT_FILE_DIRECTORIES/all_aml_train.gct $WORKING_DIR/testout.gct -t1-2"
 
 # docker local only vars
-DOCKER_CONTAINER=genepattern/java17
+DOCKER_CONTAINER=genepattern/docker-java17
 
 # aws batch only vars 
 S3_ROOT=s3://moduleiotest
