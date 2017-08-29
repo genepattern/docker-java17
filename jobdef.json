@@ -19,7 +19,7 @@
         "memory": 2000,
         "mountPoints": [],
         "ulimits": [],
-        "vcpus": 2,
+        "vcpus": 1,
         "volumes": []
     },
     "jobDefinitionName": "Java17_Oracle_Generic",
